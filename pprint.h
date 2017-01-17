@@ -36,11 +36,13 @@
 #define OPTStr(str)          fprintf(stderr, PP_C_RESET   "[OPT]" PP_C_RESET " " "%s"   PP_POSTFIX_FMT, str,    PP_POSTFIX_ARG)
 #define OPT(format, args...) fprintf(stderr, PP_C_RESET   "[OPT]" PP_C_RESET " " format PP_POSTFIX_FMT, ##args, PP_POSTFIX_ARG)
 #define OPTStart()           fprintf(stderr, PP_C_RESET   "[OPT]" PP_C_RESET " ")
+#define OPTRaw(fmt, args...) fprintf(stderr, fmt, ##args)
 #define OPTEnd()             fprintf(stderr, PP_POSTFIX_FMT, PP_POSTFIX_ARG)
 #else
 #define OPTStr(str)          
 #define OPT(format, args...) 
 #define OPTStart()           
+#define OPTRaw(fmt, args...) 
 #define OPTEnd()             
 #endif
 
@@ -48,11 +50,13 @@
 #define INFStr(str)          fprintf(stderr, PP_C_CYAN_B  "[INF]" PP_C_RESET " " "%s"   PP_POSTFIX_FMT, str,    PP_POSTFIX_ARG)
 #define INF(format, args...) fprintf(stderr, PP_C_CYAN_B  "[INF]" PP_C_RESET " " format PP_POSTFIX_FMT, ##args, PP_POSTFIX_ARG)
 #define INFStart()           fprintf(stderr, PP_C_CYAN_B  "[INF]" PP_C_RESET " ")
+#define INFRaw(fmt, args...) fprintf(stderr, fmt, ##args)
 #define INFEnd()             fprintf(stderr, PP_POSTFIX_FMT, PP_POSTFIX_ARG)
 #else
 #define INFStr(str)          
 #define INF(format, args...) 
 #define INFStart()           
+#define INFRaw(fmt, args...) 
 #define INFEnd()             
 #endif
 
@@ -60,11 +64,13 @@
 #define ACKStr(str)          fprintf(stderr, PP_C_GREEN_B "[ACK]"            " " "%s"   PP_POSTFIX_FMT, str,    PP_POSTFIX_ARG)
 #define ACK(format, args...) fprintf(stderr, PP_C_GREEN_B "[ACK]"            " " format PP_POSTFIX_FMT, ##args, PP_POSTFIX_ARG)
 #define ACKStart()           fprintf(stderr, PP_C_GREEN_B "[ACK]"            " ")
+#define ACKRaw(fmt, args...) fprintf(stderr, fmt, ##args)
 #define ACKEnd()             fprintf(stderr, PP_POSTFIX_FMT, PP_POSTFIX_ARG)
 #else
 #define ACKStr(str)          
 #define ACK(format, args...) 
 #define ACKStart()           
+#define ACKRaw(fmt, args...) 
 #define ACKEnd()             
 #endif
 
@@ -72,11 +78,13 @@
 #define DBGStr(str)          fprintf(stderr, PP_C_BLUE_B  "[DBG]"            " " "%s"   PP_POSTFIX_FMT, str,    PP_POSTFIX_ARG)
 #define DBG(format, args...) fprintf(stderr, PP_C_BLUE_B  "[DBG]"            " " format PP_POSTFIX_FMT, ##args, PP_POSTFIX_ARG)
 #define DBGStart()           fprintf(stderr, PP_C_BLUE_B  "[DBG]"            " ")
+#define DBGRaw(fmt, args...) fprintf(stderr, fmt, ##args)
 #define DBGEnd()             fprintf(stderr, PP_POSTFIX_FMT, PP_POSTFIX_ARG)
 #else
 #define DBGStr(str)          
 #define DBG(format, args...) 
 #define DBGStart()           
+#define DBGRaw(fmt, args...) 
 #define DBGEnd()             
 #endif
 
@@ -84,11 +92,13 @@
 #define ERRStr(str)          fprintf(stderr, PP_C_RED_B   "[ERR]"            " " "%s"   PP_POSTFIX_FMT, str,    PP_POSTFIX_ARG)
 #define ERR(format, args...) fprintf(stderr, PP_C_RED_B   "[ERR]"            " " format PP_POSTFIX_FMT, ##args, PP_POSTFIX_ARG)
 #define ERRStart()           fprintf(stderr, PP_C_RED_B   "[ERR]"            " ")
+#define ERRRaw(fmt, args...) fprintf(stderr, fmt, ##args)
 #define ERREnd()             fprintf(stderr, PP_POSTFIX_FMT, PP_POSTFIX_ARG)
 #else
 #define ERRStr(str)          
 #define ERR(format, args...) 
 #define ERRStart()           
+#define ERRRaw(fmt, args...) 
 #define ERREnd()             
 #endif
 
